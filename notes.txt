@@ -1,0 +1,52 @@
+Grupa 1: Algorytmy (wszystkie "agresywne")
+
+python train.py --algo PPO --strategy aggressive --name orc_ppo_aggr
+
+python train.py --algo DQN --strategy aggressive --name orc_dqn_aggr
+
+python train.py --algo A2C --strategy aggressive --name orc_a2c_aggr
+
+Grupa 2: Systemy Nagród (wszystkie PPO)
+
+python train.py --algo PPO --strategy aggressive --name orc_ppo_aggr
+
+python train.py --algo PPO --strategy defensive --name orc_ppo_def
+
+python train.py --algo PPO --strategy sniper --name orc_ppo_snipe
+
+
+PPO (Proximal Policy Optimization): * Złoty standard. Obecnie najpopularniejszy algorytm na świecie (użyty m.in. do trenowania ChatGPT czy botów OpenAI w grze Dota 2). Jest bardzo stabilny i rzadko "zapomina" to, czego się już nauczył.
+
+DQN (Deep Q-Network): * Klasyk z Atari. Algorytm oparty na tzw. funkcji wartości (Value-based). Zamiast uczyć się "co robić", uczy się oceniać "jak dobra jest dana akcja w danej sekundzie". Bardzo dobry w grach zręcznościowych z dyskretnymi akcjami.
+
+A2C (Advantage Actor-Critic): * Szybki weteran. Algorytm, w którym dwie sieci neuronowe współpracują ze sobą – Aktor decyduje o ruchu, a Krytyk ocenia ten ruch. Jest szybszy w treningu niż PPO, ale bywa mniej stabilny.
+
+AGGRESSIVE (Berserker)
+
+Logika: Ogromna nagroda za zadawanie obrażeń, zerowa lub minimalna kara za utratę własnego zdrowia. Bardzo duża kara za upływający czas.
+
+Oczekiwany efekt: Bot rzuci się na przeciwnika z pięściami, ignorując to, że sam obrywa, byle tylko zabić go jak najszybciej.
+
+DEFENSIVE (Snajper / Tchórz)
+
+Logika: Gigantyczna kara za utratę choćby punktu HP. Niewielka nagroda za zadanie obrażeń. Brak kary za upływający czas.
+
+Oczekiwany efekt: Bot będzie uciekał po całej arenie, unikał ciosów i starał się powoli wykończyć wroga atakami dystansowymi (strzałami).
+
+BALANCED (Taktyk)
+
+Logika: Zrównoważone nagrody za trafienia i równe kary za bycie trafionym.
+
+Oczekiwany efekt: Bot grający jak człowiek – atakujący wręcz, gdy ma okazję, odskakujący przed ciosem przeciwnika i używający strzał, gdy wróg jest daleko.
+
+Nasza matryca w train.py wygeneruje 9 plików .zip z modelami:
+
+ppo_aggressive.zip, ppo_defensive.zip, ppo_balanced.zip
+
+dqn_aggressive.zip, dqn_defensive.zip, dqn_balanced.zip
+
+a2c_aggressive.zip, a2c_defensive.zip, a2c_balanced.zip
+
+
+train: python -m src.ai.train
+python -m src.ai.tournament > raport_z_turnieju.txt

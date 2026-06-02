@@ -1,0 +1,26 @@
+======================================================================
+              OFICJALNY RANKING ELO (Początkowe = 1000)               
+======================================================================
+POZYCJA  | BOT NAME                       | ELO SCORE 
+----------------------------------------------------------------------
+#1      | ppo_aggressive_vs_dqn_d        |  1283.2
+#2      | ppo_aggressive                 |  1216.8
+#3      | dqn_balanced                   |  1187.9
+#4      | dqn_aggressive_vs_ppo_a        |  1167.7
+#5      | ppo_balanced_vs_dqn_b          |  1079.6
+#6      | dqn_aggressive_vs_dqn_d        |  1072.4
+#7      | ppo_aggressive_vs_dqn_b        |  1059.9
+#8      | ppo_defensive_vs_ppo_a         |  1029.4
+#9      | dqn_balanced_vs_ppo_a          |  1000.1
+#10     | dqn_defensive                  |   988.0
+#11     | dqn_defensive_vs_dqn_d         |   984.4
+#12     | ppo_balanced_vs_dqn_d          |   983.9
+#13     | ppo_defensive_vs_dqn_b         |   960.7
+#14     | dqn_defensive_vs_ppo_a         |   903.0
+#15     | dqn_aggressive_vs_dqn_b        |   902.1
+#16     | dqn_defensive_vs_dqn_b         |   902.1
+#17     | ppo_balanced_vs_ppo_a          |   899.7
+#18     | ppo_aggressive_vs_ppo_a        |   896.9
+#19     | dqn_balanced_vs_dqn_d          |   880.7
+#20     | dqn_balanced_vs_dqn_b          |   834.1
+#21     | ppo_defensive_vs_dqn_d         |   767.3
